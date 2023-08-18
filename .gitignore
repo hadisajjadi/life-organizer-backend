@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and virtual environments
+.pipenv/
+*.sqlite3
+*.db
+
+# Logs
+*.log
+
+# Static files
+/static/
+.media/
+
+# Generated files
+node_modules/
+bower_components/
+
+# Environment variables
+.env
+
+# Local development settings
+*.local_settings.py
+
+# IDE settings
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+
+# Compiled Python files
+*.pyo
+
+# Mac system files
+.DS_Store
+
+# Compiled Python files
+*.swp
+
+# Editor-specific backup files
+*~
