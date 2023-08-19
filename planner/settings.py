@@ -110,6 +110,22 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+# JWT settings
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=14),
+    'SLIDING_TOKEN_LIFETIME': timedelta(days=14),
+    'SLIDING_TOKEN_REFRESH_LIFETIME_IN_SECONDS': 1209600,
+    'SLIDING_TOKEN_LIFETIME_IN_SECONDS': 1209600,
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -136,12 +152,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SECURE_HSTS_SECONDS = 31536000  # One year in seconds
 
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
 
-SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_PRELOAD = False
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
-SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
 
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
