@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'accounts',
+    'sleeps',
 ]
 
 MIDDLEWARE = [
@@ -110,6 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "accounts.Account"
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -150,14 +154,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-SECURE_HSTS_SECONDS = 31536000  # One year in seconds
+# SECURE_HSTS_SECONDS = 31536000  # One year in seconds
 
-SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
-SECURE_HSTS_PRELOAD = False
+# SECURE_HSTS_PRELOAD = True
 
-SECURE_SSL_REDIRECT = False
+# SECURE_SSL_REDIRECT = True
 
-SESSION_COOKIE_SECURE = False
+# SESSION_COOKIE_SECURE = True
 
-CSRF_COOKIE_SECURE = False
+# CSRF_COOKIE_SECURE = True
