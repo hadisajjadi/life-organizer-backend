@@ -16,4 +16,5 @@ urlpatterns = [
     # apps
     # path('api/', include('accounts.urls')),
     path('api/', include('sleeps.urls')),
+    path('api/', include('tasks.urls')),
 ]
