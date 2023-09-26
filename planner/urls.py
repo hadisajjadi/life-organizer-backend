@@ -17,4 +17,5 @@ urlpatterns = [
     # path('api/', include('accounts.urls')),
     path('api/', include('sleeps.urls')),
     path('api/', include('tasks.urls')),
+    path('api/', include('projects.urls')),
 ]

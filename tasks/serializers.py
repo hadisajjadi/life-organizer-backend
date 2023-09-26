@@ -5,5 +5,5 @@ from accounts.serializers import AccountSerializer  # Make sure to import the ap
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-        fields = ('id', 'name', 'due_date', 'start_time', 'finish_time', 'user')
+        fields = ('id', 'name', 'due_date', 'start_time', 'finish_time', 'user', 'project')
         read_only_fields = ['user']

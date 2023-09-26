@@ -1,7 +1,8 @@
 import uuid
 from django.db import models
-from accounts.models import Account
 from django.utils import timezone
+from accounts.models import Account
+from projects.models import Project
 
 class Task(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -11,6 +12,7 @@ class Task(models.Model):
     finish_time = models.DateTimeField(null=True, blank=True)
     # todo - add repeatable field
     user = models.ForeignKey(Account, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
         return f"{self.user.email} - {self.name}"
